@@ -1,0 +1,37 @@
+Public Sub loopSum()
+
+' Declare variables
+Dim ticker1, ticker2 As String
+Dim total As Integer
+
+' Give values where possible
+ticker1 = ActiveCell.Value
+ticker2 = ActiveCell.Offset(1, 0)
+total = 0
+
+'Create while loop to continue throughout
+while (Activecell.Value <>
+
+' Create a loop that stops including once value is different
+    If (ticker1 = ticker2) Then
+    ' add it together
+        total = ticker1 + ActiveCell.Offset(0, 1).Value
+    Else
+    'if not equal then move on to the next
+        ActiveCell.Offset(0, 2).Value = ActiveCell.Offset(0, 1).Value + total
+
+    End If
+    
+' Go one cell down
+ActiveCell.Offset(1, 0).Select
+
+' Put totals where needed
+ticker1 = ActiveCell.Value
+total = ActiveCell.Offset(1, 0)
+
+' Put totals where I want them to be
+
+    
+    
+    
+End Sub
